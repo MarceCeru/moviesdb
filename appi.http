@@ -1,0 +1,41 @@
+GET http://localhost:1234/movies
+
+###Recuperar un pelicula por id
+GET http://localhost:1234/movies/ea2ec78e-6d6a-11f0-a6fe-d493903d9059
+
+
+###Recuperar todas las peliculas x un genero
+GET  http://localhost:1234/movies?genre=Drama
+
+###Crear una pelicula con POST
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "The Godfather",
+    "year": "1976",
+    "duration": "175",
+    "director": "Francis Ford Coppola",
+    "rate": "9.2",
+    "genres": [
+        "Crime",
+        "Drama"
+    ],
+    "plot": "ni idea",
+    "actors": "Al Paccino",
+    "poster": "http://img.fruugo.com/product//4/49/14441494_max.jpg",
+    "posterUrl": "http://img.fruugo.com/product//4/49/14441494_max.jpg"
+}
+
+### Actualizar una pelicula
+PATCH http://localhost:1234/movies/1
+Content-Type: application/json
+
+{
+    "year": "1999"
+}
+
+### Eliminar una pelicula
+DELETE http://localhost:1234/movies/c500feb8-a5e3-4807-8e10-ed3736cddc3f
+
+
