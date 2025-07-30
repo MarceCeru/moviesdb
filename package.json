@@ -43,6 +43,7 @@
     "zod": "4.0.5"
   },
   "scripts": {
+    "start": "node --watch server-with-mysql.js",
     "start:mysql": "node --watch server-with-mysql.js",
     "start:local": "node --watch server-with-local.js"
   },
